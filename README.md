@@ -2,6 +2,15 @@
 
 Elixir module that calculates Mutual Information between two datasets. This implementation will handle both discrete and continuous data by using histogram-based probability estimation.
 
+Mutual Information (MI) measures the amount of information obtained about one random variable through observing another random variable.
+
+MI(X,Y) = ∑∑ p(x,y) * log2(p(x,y) / (p(x) * p(y)))
+
+where:
+- p(x,y) is the joint probability distribution
+- p(x) and p(y) are the marginal probability distributions
+
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
@@ -46,9 +55,3 @@ MutualInformation.normalized(x, y)
 # Calculate entropy
 MutualInformation.entropy(x)
 ```
-
-The module implements the standard mutual information formula:
-
-MI(X,Y) = ∑∑ p(x,y) * log₂(p(x,y) / (p(x) * p(y))),
-
-where p(x,y) is the joint probability and p(x), p(y) are marginal probabilities.

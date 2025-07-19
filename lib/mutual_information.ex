@@ -1,15 +1,6 @@
 defmodule MutualInformation do
   @moduledoc """
   A module for calculating mutual information between two datasets.
-
-  Mutual Information (MI) measures the amount of information obtained about one
-  random variable through observing another random variable.
-
-  MI(X,Y) = ∑∑ p(x,y) * log2(p(x,y) / (p(x) * p(y)))
-
-  Where:
-  - p(x,y) is the joint probability distribution
-  - p(x) and p(y) are the marginal probability distributions
   """
 
   @doc """
@@ -21,18 +12,6 @@ defmodule MutualInformation do
   - `opts`: Keyword list of options
     - `:bins` - Number of bins for continuous data (default: 10)
     - `:base` - Logarithm base for calculation (default: 2)
-
-  ## Examples
-
-      iex> x = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
-      iex> y = [1, 2, 3, 4, 5, 1, 2, 3, 4, 5]
-      iex> MutualInformation.compute(x, y)
-      2.321928094887362
-
-      iex> x = [1, 1, 2, 2, 3, 3]
-      iex> y = [1, 2, 1, 2, 1, 2]
-      iex> MutualInformation.compute(x, y)
-      0.0
   """
   def compute(dataset_x, dataset_y, opts \\ []) do
     bins = Keyword.get(opts, :bins, 10)
