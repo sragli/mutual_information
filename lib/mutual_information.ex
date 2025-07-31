@@ -25,16 +25,13 @@ defmodule MutualInformation do
       raise ArgumentError, "Datasets cannot be empty"
     end
 
-    # Discretize data if needed
     x_discrete = discretize(dataset_x, bins)
     y_discrete = discretize(dataset_y, bins)
 
-    # Calculate probability distributions
     joint_prob = joint_probability(x_discrete, y_discrete)
     marginal_x = marginal_probability(x_discrete)
     marginal_y = marginal_probability(y_discrete)
 
-    # Calculate mutual information
     compute_mi(joint_prob, marginal_x, marginal_y, base)
   end
 

@@ -26,9 +26,9 @@ end
 
 ## Main Functions
 
-* *compute/3* - Calculates mutual information between two datasets
-* *normalized/3* - Returns normalized mutual information (0-1 scale)
-* *entropy/2* - Calculates entropy of a single dataset
+* `compute/3` - Calculates mutual information between two datasets
+* `normalized/3` - Returns normalized mutual information (0-1 scale)
+* `entropy/2` - Calculates entropy of a single dataset
 
 ## Key Features
 
